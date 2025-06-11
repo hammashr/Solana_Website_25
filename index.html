@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Solana Website</title>
+  </head>
+  <body>
+    <section class="navbar">
+      <div class="nav-content">
+        <div class="solana_left">
+          <img
+            src="data:image/webp;base64,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"
+            alt=""
+            width="25px"
+            height="25px"
+          />
+          <h2>SOLANA</h2>
+        </div>
+        <div class="solana-mid"></div>
+        <div class="solana_right">
+          <ol class="menu-items">
+            <li>Learn<i class="bi bi-chevron-down"></i></li>
+            <li>Developers<i class="bi bi-chevron-down"></i></li>
+            <li>Solutions<i class="bi bi-chevron-down"></i></li>
+            <li>Network<i class="bi bi-chevron-down"></i></li>
+            <li>Community<i class="bi bi-chevron-down"></i></li>
+          </ol>
+        </div>
+        <i class="bi bi-list"></i>
+        <div class="search">
+          <i class="bi bi-search"></i>
+          <p>Search</p>
+        </div>
+      </div>
+    </section>
+    <section class="hero">
+      <h1>
+        Powerful for developers. <br />
+        Fast for everyone.
+      </h1>
+      <p>
+        Bring blockchain to the people. Solana supports experiences <br />
+        for power users, new consumers, and everyone in between.
+      </p>
+      <button class="start">START BUILDING</button>
+      <button class="resources">RESOURCES</button>
+
+      <p class="para1">
+        Powering tools and integrations from companies all around the world
+      </p>
+      <div class="images">
+        <img
+          src="https://solana.com/_next/image?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252Fce0c7323a97a4d91bd0baa7490ec9139%252F0b6a53cf32794fb192e318ceeb647516&w=128&q=75"
+          width="100px"
+          alt=""
+        />
+        <img
+          src="https://solana.com/_next/image?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252Fce0c7323a97a4d91bd0baa7490ec9139%252F99fc2e4c135d4284936a4dc130373935&w=128&q=75"
+          width="100px"
+          alt=""
+        />
+        <img
+          src="https://solana.com/_next/image?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252Fce0c7323a97a4d91bd0baa7490ec9139%252Ff5a7df85e0f44af9b95eb92290694bfc&w=128&q=75"
+          width="60px"
+          alt=""
+        />
+        <img
+          src="https://solana.com/_next/image?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252Fce0c7323a97a4d91bd0baa7490ec9139%252F5e82db5eeb674963ba79de5b82389c61&w=128&q=75"
+          width="60px"
+          alt=""
+        />
+        <img
+          src="https://solana.com/_next/image?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252Fce0c7323a97a4d91bd0baa7490ec9139%252Fbf3ec5546f68436182b060308bffd31a&w=128&q=75"
+          width="90px"
+          alt=""
+        />
+        <img
+          src="https://solana.com/_next/image?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252Fce0c7323a97a4d91bd0baa7490ec9139%252Fb215a85c9d1841a48050a04d5d0269fe&w=128&q=75"
+          width="80px"
+          alt=""
+        />
+        <img
+          src="https://solana.com/_next/image?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252Fce0c7323a97a4d91bd0baa7490ec9139%252F216601dcf61448b6861659e35f020ecd&w=128&q=75"
+          width="60px"
+          alt=""
+        />
+        <img
+          src="https://solana.com/_next/image?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252Fce0c7323a97a4d91bd0baa7490ec9139%252F5c6fc8c39c58451d98affc20a146b12c&w=128&q=75"
+          width="50px"
+          alt=""
+        />
+      </div>
+      <div class="card">
+        <div class="c-image">
+          <img
+            src="https://solana.com/_next/image?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252Fce0c7323a97a4d91bd0baa7490ec9139%252F0f8e98289bd04fba838aa9818fe46617&w=1920&q=75"
+            width="100%"
+            alt=""
+          />
+        </div>
+        <div class="c-content">
+          <button class="news">NEWS</button>
+          <h2 class="c-heading">
+            Solana Accelerate brings together 3000+ founders, devs, and
+            policymakers in NYC
+          </h2>
+          <p>
+            Watch any talk you missed on YouTube covering the latest in crypto
+            product and policy in America.
+          </p>
+          <button class="watch">WATCH</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="community">
+      <div class="co-left">
+        <h2>
+          Join a community <br />
+          of millions.
+        </h2>
+      </div>
+      <div class="co-right">
+        <p class="p1">29.7M</p>
+        <h2>Fee Paying Accounts, All Time</h2>
+        <p class="p2">340M+</p>
+        <h2>NFTs Minted</h2>
+        <p class="p3">$0.00064</p>
+        <h2>Median Fee per Transaction</h2>
+      </div>
+    </section>
+    <section class="adoption">
+      <div class="a-left">
+        <h2>
+          Made for mass <br />
+          adoption.
+        </h2>
+        <p>LIVE DATA</p>
+      </div>
+      <div class="a-mid">
+        <div class="a-card">
+          <h3>Fast</h3>
+          <p>
+            Don’t keep your users waiting. Solana <br />
+            has block times of 400 milliseconds <br />
+            — and as hardware gets faster, so will <br />
+            the network.
+          </p>
+          <h3>4,062</h3>
+          <p class="transaction">TRANSACTIONS PER SECOND</p>
+        </div>
+        <div class="a-card">
+          <h3>Fast</h3>
+          <p>
+            Don’t keep your users waiting. Solana <br />
+            has block times of 400 milliseconds <br />
+            — and as hardware gets faster, so will <br />
+            the network.
+          </p>
+          <h3>4,062</h3>
+          <p class="transaction">TRANSACTIONS PER SECOND</p>
+        </div>
+      </div>
+      <div class="a-right">
+        <div class="a-card">
+          <h3>Fast</h3>
+          <p>
+            Don’t keep your users waiting. Solana <br />
+            has block times of 400 milliseconds <br />
+            — and as hardware gets faster, so will <br />
+            the network.
+          </p>
+          <h3>4,062</h3>
+          <p class="transaction">TRANSACTIONS PER SECOND</p>
+        </div>
+        <div class="a-card">
+          <h3>Fast</h3>
+          <p>
+            Don’t keep your users waiting. Solana <br />
+            has block times of 400 milliseconds <br />
+            — and as hardware gets faster, so will <br />
+            the network.
+          </p>
+          <h3>4,062</h3>
+          <p class="transaction">TRANSACTIONS PER SECOND</p>
+        </div>
+      </div>
+    </section>
+    <section class="design">
+      <div class="d-upper">
+        <h2>Designed for real world use.</h2>
+        <button class="case-studies">GO TO CASE STUDIES →</button>
+      </div>
+      <div class="d-center">
+        <button class="case-study">CASE STUDY</button>
+        <h1>XP</h1>
+        <p>
+          XP aims to save consumers from high event ticket fees using Solana.
+        </p>
+        <button class="arrow">→</button>
+      </div>
+      <div class="d-bottom">
+        <div class="d-card">
+          <button class="case-study">CASE STUDY</button>
+          <div class="heading2">
+            <h2>Boba Guys</h2>
+            <button class="arrow">→</button>
+          </div>
+          <p>
+            Boba Guys used a Solana-powered <br />
+            loyalty program to increase monthly <br />
+            sales by 67%.
+          </p>
+        </div>
+        <div class="d-card">
+          <button class="case-study">CASE STUDY</button>
+          <div class="heading2">
+            <h2>Boba Guys</h2>
+            <button class="arrow">→</button>
+          </div>
+          <p>
+            Boba Guys used a Solana-powered <br />
+            loyalty program to increase monthly <br />
+            sales by 67%.
+          </p>
+        </div>
+        <div class="d-card">
+          <button class="case-study">VIDEO</button>
+          <div class="heading2">
+            <h2>Boba Guys</h2>
+            <button class="arrow">→</button>
+          </div>
+          <p>
+            Boba Guys used a Solana-powered <br />
+            loyalty program to increase monthly <br />
+            sales by 67%.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="build">
+      <div class="b-upper">
+        <div class="b-text">
+          <h2>Build for growth.</h2>
+        </div>
+        <div class="b-btn">
+          <button class="build-buttons">PAYMENTS</button>
+          <button class="build-buttons">GAMING</button>
+          <button class="build-buttons">NFTS</button>
+          <button class="build-buttons">DEFI</button>
+          <button class="build-buttons">DAOS</button>
+        </div>
+      </div>
+      <div class="b-center">
+        <div class="b-center-left">
+          <img
+            src="https://solana.com/_next/image?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252Fce0c7323a97a4d91bd0baa7490ec9139%252F7fcacf8bfcd44134944121d389d24edb&w=640&q=75"
+            width="100%"
+            alt=""
+          />
+        </div>
+        <div class="b-center-right">
+          <img
+            src="https://solana.com/_next/image?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252Fce0c7323a97a4d91bd0baa7490ec9139%252F216601dcf61448b6861659e35f020ecd&w=384&q=75"
+            width="35%"
+            alt=""
+          />
+          <p>
+            Solana Pay is now available to millions of businesses as an <br />
+            approved app integration on Shopify. Solana Pay is built for <br />
+            immediate USDC transactions, fees that are fractions of a penny,
+            <br />
+            and a net-zero environmental impact.
+          </p>
+          <p>
+            LEARN MORE ABOUT PAYMENTS ON SOLANA
+            <span class="up-right-arrow"> ↗</span>
+          </p>
+        </div>
+      </div>
+      <div class="b-bottom">
+        <img
+          src="https://solana.com/_next/image?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252Fce0c7323a97a4d91bd0baa7490ec9139%252Fb7cd5959a4a24b528f6a70e6cf16f137&w=128&q=75"
+          width="10%"
+          alt=""
+        />
+        <img
+          src="https://solana.com/_next/image?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252Fce0c7323a97a4d91bd0baa7490ec9139%252F49bfeb8d3b554624b1104e3310338da1&w=128&q=75"
+          width="10%"
+          alt=""
+        />
+        <img
+          src="https://solana.com/_next/image?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252Fce0c7323a97a4d91bd0baa7490ec9139%252F6a83a1dd16874f22b668f9d18deefb85&w=128&q=75"
+          width="7%"
+          alt=""
+        />
+        <img
+          src="https://solana.com/_next/image?url=https%3A%2F%2Fcdn.builder.io%2Fapi%2Fv1%2Fimage%2Fassets%252Fce0c7323a97a4d91bd0baa7490ec9139%252F4d797d63b0f34c469d47cae71e142e1e&w=128&q=75"
+          width="10%"
+          alt=""
+        />
+      </div>
+    </section>
+    <div class="join">
+      <h2>Join a thriving community.</h2>
+    </div>
+    <div class="puyo">
+      <div class="grid">
+        <div class="move">
+          <div class="boxes1"></div>
+          <div class="boxes2">
+            <div class="tota">
+              <h1>9,300</h1>
+              <p>
+                Developers building during Solana <br />
+                Hackathons
+              </p>
+            </div>
+            <div id="two" class="tota"></div>
+          </div>
+          <div class="boxes3"></div>
+          <div class="boxes4">
+            <div id="strip" class="mota"></div>
+            <div class="mota">
+              <p>2,082</p>
+              <h1>Monthly active programs</h1>
+            </div>
+          </div>
+          <div class="boxes5"></div>
+          <div class="boxes6">
+            <div class="nota">
+              <h1>20,000</h1>
+              <p>Solana Hacker House participants</p>
+            </div>
+            <div id="loei" class="nota"></div>
+          </div>
+          <div class="boxes7"></div>
+          <div class="boxes8">
+            <div id="loge" class="lota"></div>
+            <div class="lota">
+              <h1>48,000</h1>
+              <p>
+                Developers building during Solana <br />
+                Hackathons
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="m-page">
+      <div class="page">
+        <h1>
+          It's time to join the thousands <br />
+          of creators, artists, and <br />
+          developers using Solana.
+        </h1>
+        <button>START BUILDING</button>
+      </div>
+    </div>
+    <div class="n-section">
+      <div class="l-section">
+        <div class="yes">
+          <p style="color: white">Managed by</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="210"
+            height="35"
+            fill="none"
+          >
+            <g clip-path="url(#xk4n9p2w)">
+              <path
+                fill="#fff"
+                d="M67.245 3.493H55.6V6.37h8.55a3.13 3.13 0 0 1 2.19.895 3.03 3.03 0 0 1 .906 2.164v2.513a3.01 3.01 0 0 1-.902 2.167A3.09 3.09 0 0 1 64.15 15H52.687v-2.877h11.647V9.248h-8.55a3.13 3.13 0 0 1-2.19-.896 3.05 3.05 0 0 1-.907-2.164V3.675a3.01 3.01 0 0 1 .903-2.167 3.1 3.1 0 0 1 2.194-.891h11.461zM81.363.616c1.722 0 3.117 1.358 3.117 3.06v8.265c0 1.702-1.395 3.06-3.117 3.06h-8.96a3.11 3.11 0 0 1-2.194-.892 3.04 3.04 0 0 1-.902-2.168V3.675a3 3 0 0 1 .902-2.168 3.08 3.08 0 0 1 2.194-.891zm.184 2.877h-9.329v8.63h9.33zm8.117 8.53h11.359v3.1H88.536a2.03 2.03 0 0 1-1.42-.583 1.98 1.98 0 0 1-.59-1.403V.494h3.138zM115.717.615c1.394 0 2.522 1.094 2.522 2.472V15h-2.933v-4.72h-9.329V15h-2.912V3.088A2.46 2.46 0 0 1 104.607.8c.305-.124.631-.186.96-.184zm-.411 2.877h-9.329v3.91h9.329zm17.22-2.877h2.933v12.52c0 1.034-.862 1.864-1.908 1.864h-2.255a1.82 1.82 0 0 1-1.681-.992l-5.659-10.515h-.759V15h-2.912V2.5c0-1.053.841-1.884 1.887-1.884h2.379c.697 0 1.353.365 1.681.993l5.658 10.514h.636V.617Zm17.63 0c1.395 0 2.522 1.094 2.522 2.472V15h-2.932v-4.72h-9.329V15h-2.912V3.088A2.46 2.46 0 0 1 139.047.8c.305-.124.631-.186.96-.184zm-.41 2.877h-9.329v3.91h9.329zm-82.788 18.75H55.6v2.877h11.36v2.877H55.6v5.753h-2.911V19.366h14.27v2.877Zm14.105-2.877c1.722 0 3.116 1.358 3.116 3.06v8.265c0 1.702-1.394 3.06-3.116 3.06h-8.96a3.1 3.1 0 0 1-2.195-.892 3 3 0 0 1-.902-2.168v-8.266a3 3 0 0 1 .902-2.168 3.1 3.1 0 0 1 2.194-.892zm.184 2.877h-9.33v8.63h9.33zm17.22-2.877h2.932v9.563c-.021 2.674-2.194 4.821-4.9 4.821h-5.393a4.9 4.9 0 0 1-1.87-.363 4.9 4.9 0 0 1-1.585-1.045 4.8 4.8 0 0 1-1.057-1.566 4.8 4.8 0 0 1-.368-1.848v-9.562h2.912v8.975c0 .672.27 1.316.75 1.79a2.58 2.58 0 0 0 1.813.742h4.203a2.58 2.58 0 0 0 1.812-.741c.48-.475.75-1.12.75-1.791zm17.22 0h2.932v12.52c0 1.034-.861 1.864-1.907 1.864h-2.255a1.83 1.83 0 0 1-1.682-.992l-5.659-10.515h-.758V33.75h-2.912v-12.5c0-1.053.841-1.884 1.886-1.884h2.379c.697 0 1.353.365 1.681.993l5.659 10.514h.636V19.367Zm15.251 0c2.707 0 4.88 2.168 4.901 4.822v4.74c-.021 2.675-2.194 4.822-4.901 4.822h-10.272V19.366h10.272Zm1.969 5.43a2.553 2.553 0 0 0-2.563-2.553h-6.766v8.63h6.766a2.58 2.58 0 0 0 1.812-.742 2.52 2.52 0 0 0 .751-1.79v-3.546Zm17.63-5.43c1.394 0 2.522 1.094 2.522 2.472V33.75h-2.932v-4.72h-9.329v4.72h-2.912V21.838a2.43 2.43 0 0 1 .728-1.753 2.48 2.48 0 0 1 1.773-.719h10.15Zm-.41 2.877h-9.329v3.91h9.329zm4.979-2.877h14.557v2.877h-5.823V33.75h-2.911V22.243h-5.823v-2.877Zm19.531 14.384h-2.912V19.366h2.912zm14.11-14.384c1.722 0 3.116 1.358 3.116 3.06v8.265c0 1.702-1.394 3.06-3.116 3.06h-8.96a3.1 3.1 0 0 1-2.194-.892 3 3 0 0 1-.902-2.168v-8.266a3 3 0 0 1 .902-2.168 3.1 3.1 0 0 1 2.194-.892zm.184 2.877h-9.329v8.63h9.329zm17.22-2.877h2.932v12.52c0 1.034-.861 1.864-1.906 1.864h-2.256a1.82 1.82 0 0 1-1.681-.992l-5.659-10.515h-.759V33.75h-2.911v-12.5c0-1.053.84-1.884 1.886-1.884h2.378c.697 0 1.354.365 1.681.993l5.66 10.514h.635V19.367Z"
+              ></path>
+              <mask
+                id="ym7vn3kl"
+                width="38"
+                height="35"
+                x="0"
+                y="0"
+                maskUnits="userSpaceOnUse"
+                style="mask-type: luminance"
+              >
+                <path fill="#fff" d="M0 .934h37.594v33.28H0V.935Z"></path>
+              </mask>
+              <g mask="url(#ym7vn3kl)">
+                <path
+                  fill="url(#rt8wq5hz)"
+                  d="m37.4 27.173-6.205 6.588a1.44 1.44 0 0 1-1.055.454H.722a.73.73 0 0 1-.552-.253.71.71 0 0 1 .025-.947l6.21-6.588a1.44 1.44 0 0 1 1.052-.453h29.418a.73.73 0 0 1 .66.429.71.71 0 0 1-.135.77m-6.205-13.266a1.44 1.44 0 0 0-1.055-.454H.722a.73.73 0 0 0-.553.253.71.71 0 0 0 .025.947l6.211 6.588a1.44 1.44 0 0 0 1.051.454h29.418a.73.73 0 0 0 .551-.254.707.707 0 0 0-.025-.946zM.721 9.174H30.14a1.45 1.45 0 0 0 1.054-.454L37.4 2.133a.71.71 0 0 0-.527-1.2H7.457a1.45 1.45 0 0 0-1.051.453L.196 7.974a.71.71 0 0 0 .525 1.2"
+                ></path>
+              </g>
+            </g>
+            <defs>
+              <linearGradient
+                id="rt8wq5hz"
+                x1="3.174"
+                x2="33.674"
+                y1="35.008"
+                y2="0.274"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop offset="0.08" stop-color="#9945FF"></stop>
+                <stop offset="0.3" stop-color="#8752F3"></stop>
+                <stop offset="0.5" stop-color="#5497D5"></stop>
+                <stop offset="0.6" stop-color="#43B4CA"></stop>
+                <stop offset="0.72" stop-color="#28E0B9"></stop>
+                <stop offset="0.97" stop-color="#19FB9B"></stop>
+              </linearGradient>
+              <clipPath id="xk4n9p2w">
+                <path fill="#fff" d="M0 0h210v35H0z"></path>
+              </clipPath>
+            </defs>
+          </svg>
+          <div class="boot">
+            <i class="bi bi-youtube" style="font-size: 1.5rem; color: gray"></i>
+            <i
+              class="bi bi-twitter-x"
+              style="font-size: 1.5rem; color: gray"
+            ></i>
+            <i class="bi bi-discord" style="font-size: 1.5rem; color: gray"></i>
+            <i class="bi bi-reddit" style="font-size: 1.5rem; color: gray"></i>
+            <i class="bi bi-github" style="font-size: 1.5rem; color: gray"></i>
+            <i
+              class="bi bi-telegram"
+              style="font-size: 1.5rem; color: gray"
+            ></i>
+          </div>
+          <p style="color: white">
+            © 2025 Solana Foundation. All rights reserved
+          </p>
+        </div>
+        <div class="no">
+          <div class="no1">
+            <h4>SOLANA</h4>
+            <p>Grants</p>
+            <p>Break Solana</p>
+            <p>Media Kit</p>
+            <p>Careers</p>
+            <p>Disclaimer</p>
+            <p>Privacy Policy</p>
+          </div>
+          <div class="no2">
+            <h4>GET CONNECTED</h4>
+            <p>Blog</p>
+            <p>Newsletter</p>
+          </div>
+          <div class="no3"><i class="bi bi-globe2"></i>ENG</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
